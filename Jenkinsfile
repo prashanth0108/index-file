@@ -1,6 +1,6 @@
 node {
     stage('clone'){
-        git'https://github.com/prashanth0108/staticapp.git'
+        git branch: 'main', url: 'https://github.com/prashanth0108/staticapp.git'
     }
     stage('image build'){
         sh'docker build -t project .'
