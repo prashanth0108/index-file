@@ -1,6 +1,6 @@
 node {
     stage('clone'){
-        git'https://github.com/prashanth0108/index-file.git'
+        git'https://github.com/prashanth0108/staticapp.git'
     }
     stage('image build'){
         sh'docker build -t project .'
