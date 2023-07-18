@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM Ubuntu:trusty
 LABEL maintainer address"prashanthkusuma"
 RUN apt install nginx -y
 COPY ./ /usr/share/nginx/html
