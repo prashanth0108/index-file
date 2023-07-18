@@ -1,12 +1,7 @@
 FROM  centos:latest
-MAINTAINER mailto:vikashashoke@gmail.com
-RUN yum install -y httpd \
- zip\
- unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
-WORKDIR /var/www/html/
-RUN unzip photogenic.zip
-RUN cp -rvf photogenic/* .
-RUN rm -rf photogenic photogenic.zip
+LABEL maintainer address "prashanth kusuma"
+RUN yum install httpd -y
+RUN systemctl httpd start
+COPY ./ /var/www/html
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
