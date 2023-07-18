@@ -1,4 +1,4 @@
-FROM CentOS
+FROM Centos
 LABEL Maintainer Address "prashanthkusuma"
 RUN yum update -y && yum install httpd -y
 RUN systemctl httpd start
