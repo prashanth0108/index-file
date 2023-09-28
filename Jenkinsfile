@@ -6,6 +6,6 @@ node {
         sh'''docker build -t prashu1 .'''
     }
     stage('run container'){
-        sh'''docker run --name web -d -p 88:80 prashu1:latest'''
+        sh'''docker run --name web2 -d -p 88:80 prashu1:latest'''
     }
 }
